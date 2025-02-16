@@ -127,7 +127,7 @@ public static class ServiceCollectionExtensions
 
 	public static IServiceCollection AddHealth(this IServiceCollection services, IConfiguration configuration)
 	{
-		SqlServerHealthCheckBuilderExtensions.AddSqlServer(services.AddHealthChecks(), configuration.GetDefaultConnectionString(), (string)null, (Action<SqlConnection>)null, (string)null, (HealthStatus?)null, (IEnumerable<string>)null, (TimeSpan?)null);
+		SqlServerHealthCheckBuilderExtensions.AddSqlServer(services.AddHealthChecks(), configuration.GetDefaultConnectionString());
 		return services;
 	}
 }
